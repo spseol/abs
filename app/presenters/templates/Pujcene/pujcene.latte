@@ -5,13 +5,19 @@
             <div>
                 <tr>
                     <td><div>Ev.č</div></td>
-               
+                    <td><div>Práce</div></td>
+                    <td><div>Kdo jí chce</div></td>
+                    <td><div>Stav</div></td>
+                    <td><div>Čas záznamu</div></td>
                 </tr>
             </div>          
-            <div n:foreach="$knihy as $book" class="post">
+            <div n:foreach="$log as $logs" class="post">
                 <tr>
-                    <td><div>{$book->ev_cislo}</div></td>
-
+                    <td><div>{"dodelat left join z knihy"}</div></td>
+                    <td><div>{$logs->ID_knihy}</div></td>
+                    <td><div>{$logs->ID_users}</div></td>
+                    <td><div>{$logs->akce}</div></td>
+                    <td><div>{$logs->date}</div></td>
                 </tr>
             </div>
         </table>

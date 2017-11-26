@@ -153,8 +153,8 @@ class Container_957e72ca51 extends Nette\DI\Container
 			'App\Presenters\Error4xxPresenter' => [1 => ['application.1']],
 			'App\Presenters\ErrorPresenter' => [1 => ['application.2']],
 			'App\Presenters\HomepagePresenter' => [1 => ['application.3']],
-			'App\Presenters\NecoPresenter' => [1 => ['application.4']],
-			'App\Presenters\PostPresenter' => [1 => ['application.5']],
+			'App\Presenters\PostPresenter' => [1 => ['application.4']],
+			'App\Presenters\PujcenePresenter' => [1 => ['application.5']],
 			'App\Presenters\SignPresenter' => [1 => ['application.6']],
 			'NetteModule\ErrorPresenter' => [1 => ['application.7']],
 			'NetteModule\MicroPresenter' => [1 => ['application.8']],
@@ -168,8 +168,8 @@ class Container_957e72ca51 extends Nette\DI\Container
 			'application.1' => 'App\Presenters\Error4xxPresenter',
 			'application.2' => 'App\Presenters\ErrorPresenter',
 			'application.3' => 'App\Presenters\HomepagePresenter',
-			'application.4' => 'App\Presenters\NecoPresenter',
-			'application.5' => 'App\Presenters\PostPresenter',
+			'application.4' => 'App\Presenters\PostPresenter',
+			'application.5' => 'App\Presenters\PujcenePresenter',
 			'application.6' => 'App\Presenters\SignPresenter',
 			'application.7' => 'NetteModule\ErrorPresenter',
 			'application.8' => 'NetteModule\MicroPresenter',
@@ -213,8 +213,8 @@ class Container_957e72ca51 extends Nette\DI\Container
 				'application.1' => 'App\Presenters\Error4xxPresenter',
 				'application.2' => 'App\Presenters\ErrorPresenter',
 				'application.3' => 'App\Presenters\HomepagePresenter',
-				'application.4' => 'App\Presenters\NecoPresenter',
-				'application.5' => 'App\Presenters\PostPresenter',
+				'application.4' => 'App\Presenters\PostPresenter',
+				'application.5' => 'App\Presenters\PujcenePresenter',
 				'application.6' => 'App\Presenters\SignPresenter',
 				'application.7' => 'NetteModule\ErrorPresenter',
 				'application.8' => 'NetteModule\MicroPresenter',
@@ -318,9 +318,9 @@ class Container_957e72ca51 extends Nette\DI\Container
 	}
 
 
-	public function createServiceApplication__4(): App\Presenters\NecoPresenter
+	public function createServiceApplication__4(): App\Presenters\PostPresenter
 	{
-		$service = new App\Presenters\NecoPresenter($this->getService('database.default.context'));
+		$service = new App\Presenters\PostPresenter;
 		$service->injectPrimary($this, $this->getService('application.presenterFactory'),
 			$this->getService('routing.router'), $this->getService('http.request'),
 			$this->getService('http.response'), $this->getService('session.session'),
@@ -330,9 +330,9 @@ class Container_957e72ca51 extends Nette\DI\Container
 	}
 
 
-	public function createServiceApplication__5(): App\Presenters\PostPresenter
+	public function createServiceApplication__5(): App\Presenters\PujcenePresenter
 	{
-		$service = new App\Presenters\PostPresenter;
+		$service = new App\Presenters\PujcenePresenter($this->getService('database.default.context'));
 		$service->injectPrimary($this, $this->getService('application.presenterFactory'),
 			$this->getService('routing.router'), $this->getService('http.request'),
 			$this->getService('http.response'), $this->getService('session.session'),

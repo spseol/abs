@@ -58,10 +58,10 @@ class Template2d59123cd5 extends Latte\Runtime\Template
     </div>
     <div id="menu">
         <ul float="left">
-            <li><a href="">Práce</a></li>
+            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Homepage:default")) ?>">Přehled prací FUNGUJE</a></li> 
             <li><a href="">Rezervované</a></li>
             <li><a href="">Připravené k vyzvednutí</a></li>
-            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Neco:tohle")) ?>">Půjčené FUNGUJE</a></li>            
+            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Pujcene:pujcene")) ?>">Půjčené FUNGUJE</a></li>            
             <li><a href="">Tisk</a></li>
             <li><a href="">Odlasit se</a></li>
             <li><a href="">Prihlášen jako: DODELAT!!</a></li>     

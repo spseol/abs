@@ -12,9 +12,9 @@ class HomepagePresenter extends Nette\Application\UI\Presenter{
     public function __construct(Nette\Database\Context $database){
         $this->database = $database;
     }
- public function renderDefault(){
-    $this->template->knihy = $this->database->table('knihy')
-        ->order('datumpridani DESC')
-        ->limit(50);
+    public function renderDefault(){
+        $this->template->knihy = $this->database->table('knihy')
+            ->order('datumpridani DESC')
+            ->limit(50);
 }
 }
