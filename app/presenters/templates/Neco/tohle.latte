@@ -1,0 +1,20 @@
+{block content}
+<div>    
+    <div>
+        <table border="1">
+            <div>
+                <tr>
+                    <td><div>Ev.č</div></td>
+               
+                </tr>
+            </div>          
+            <div n:foreach="$knihy as $book" class="post">
+                <tr>
+                    <td><div>{$book->ev_cislo}</div></td>
+
+                </tr>
+            </div>
+        </table>
+    </div>
+</div>
+{/block}
