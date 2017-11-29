@@ -9,7 +9,11 @@ class PostPresenter extends Nette\Application\UI\Presenter
 {
     /** @var Nette\Database\Context */
     private $database;
-
+    
+    public function __construct(Nette\Database\Context $database){
+        $this->database = $database;
+    }
+    
     protected function createComponentPostForm()
     {
         $form = new Form;
@@ -31,9 +35,7 @@ class PostPresenter extends Nette\Application\UI\Presenter
             ->setRequired();
         $form->addTextArea('souhlas', 'souhlas:')
             ->setRequired();
-        
-
-        
+          
         $form->addSubmit('send', 'Uložit a publikovat');
         $form->onSuccess[] = [$this, 'postFormSucceeded'];
 	
@@ -42,8 +44,7 @@ class PostPresenter extends Nette\Application\UI\Presenter
     public function postFormSucceeded($form, $values)
 {
     $post = $this->database->table('knihy')->insert($values);
-
-    $this->flashMessage("Příspěvek byl úspěšně publikován.", 'success');
-    $this->redirect('show', $post->id);
-}
+    $this->flashMessage("Nová práce byla vložena.", 'success');
+    $this->redirect('this');
+    }   
 }

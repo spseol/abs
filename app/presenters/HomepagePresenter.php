@@ -14,7 +14,8 @@ class HomepagePresenter extends Nette\Application\UI\Presenter{
     }
     public function renderDefault(){
         $this->template->knihy = $this->database->table('knihy')
-            ->order('datumpridani DESC')
+           /** ->where ('ID="843"')*/ /** klasicka podminka where */
+            ->order('datumpridani DESC') 
             ->limit(50);
 }
 }

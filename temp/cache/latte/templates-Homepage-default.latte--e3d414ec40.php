@@ -38,7 +38,7 @@ class Templatee3d414ec40 extends Latte\Runtime\Template
 ?>
 <div>    
     <div>
-        <table border="1">
+        <table>
             <div>
                 <tr>
                     <td><div>Ev.č</div></td>
@@ -66,11 +66,11 @@ class Templatee3d414ec40 extends Latte\Runtime\Template
                     <td><div><?php echo LR\Filters::escapeHtmlText($book->ev_cislo) /* line 26 */ ?></div></td>
                     <td><div><?php echo LR\Filters::escapeHtmlText($book->prace) /* line 27 */ ?></div></td>
                     <td><div><?php echo LR\Filters::escapeHtmlText($book->ajmeno) /* line 28 */ ?></div></td>
-                    <td><div><?php echo LR\Filters::escapeHtmlText($book->vedouci) /* line 29 */ ?></div></td>
-                    <td><div><?php echo LR\Filters::escapeHtmlText($book->oponent) /* line 30 */ ?></div></td>
+                    <td><div><?php echo LR\Filters::escapeHtmlText($book->ref('oponenti', 'vedouci')->jmeno) /* line 29 */ ?></div></td>
+                    <td><div><?php echo LR\Filters::escapeHtmlText($book->ref('oponenti', 'oponent')->jmeno) /* line 30 */ ?></div></td>
                     <td><div><?php echo LR\Filters::escapeHtmlText($book->rok) /* line 31 */ ?></div></td>
                     <td><div><?php echo LR\Filters::escapeHtmlText($book->typ) /* line 32 */ ?></div></td>
-                    <td><div><?php echo LR\Filters::escapeHtmlText($book->stav) /* line 33 */ ?></div></td>
+                    <td><div><?php echo LR\Filters::escapeHtmlText($book->stav) /* line 33 */ ?></div></td>                  
                     <td>
                         <div><a href="">Upravit</a></div>
                         <div><a href="">Smazat</a></div>

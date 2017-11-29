@@ -1,9 +1,9 @@
 <?php
-// source: C:\xampp\htdocs\abs\app\presenters/templates/Pujcene/pujcene.latte
+// source: C:\xampp\htdocs\abs\app\presenters/templates/Knihyinfo/rezervovane.latte
 
 use Latte\Runtime as LR;
 
-class Template81562f8339 extends Latte\Runtime\Template
+class Template5ab304af76 extends Latte\Runtime\Template
 {
 	public $blocks = [
 		'content' => 'blockContent',
@@ -38,7 +38,7 @@ class Template81562f8339 extends Latte\Runtime\Template
 ?>
 <div>    
     <div>
-        <table border="1">
+        <table>
             <div>
                 <tr>
                     <td><div>Ev.č</div></td>
@@ -53,8 +53,8 @@ class Template81562f8339 extends Latte\Runtime\Template
 		foreach ($log as $logs) {
 ?>            <div class="post">
                 <tr>
-                    <td><div>{"dodelat left join z knihy"}</div></td>
-                    <td><div><?php echo LR\Filters::escapeHtmlText($logs->ID_knihy) /* line 17 */ ?></div></td>
+                    <td><div><?php echo LR\Filters::escapeHtmlText($logs->ref('knihy', 'ID_knihy')->ev_cislo) /* line 16 */ ?></div></td>
+                    <td><div><?php echo LR\Filters::escapeHtmlText($logs->ref('knihy', 'ID_knihy')->prace) /* line 17 */ ?></div></td>
                     <td><div><?php echo LR\Filters::escapeHtmlText($logs->ID_users) /* line 18 */ ?></div></td>
                     <td><div><?php echo LR\Filters::escapeHtmlText($logs->akce) /* line 19 */ ?></div></td>
                     <td><div><?php echo LR\Filters::escapeHtmlText($logs->date) /* line 20 */ ?></div></td>

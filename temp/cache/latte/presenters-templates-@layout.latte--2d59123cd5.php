@@ -45,33 +45,39 @@ class Template2d59123cd5 extends Latte\Runtime\Template
 
 <body>
     <div>
-        <h1>
-            Knihovna
-        </h1>
-        <div>
-            <script type="text/javascript">
-                d = new Date(); // vytvoří proměnnou, ve které je aktuální datum
-                document.write("Dnes je: " + d.getDate() + ". " + (d.getMonth() + 1) + ". " + d.getFullYear());
-                document.write("<br />");
-            </script>
-        </div>
+        <nav id="sidemenu">    
+                <li><h2>Tisk</h2></li> 
+                <li><a href="">Eco1</a></li>
+                <li><a href="">Eco1</a></li>
+                <li><a href="">Eco1</a></li>
+                <li><a href="">Eco1</a></li>
+        </nav>
     </div>
-    <div id="menu">
-        <ul float="left">
-            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Homepage:default")) ?>">Přehled prací FUNGUJE</a></li> 
-            <li><a href="">Rezervované</a></li>
-            <li><a href="">Připravené k vyzvednutí</a></li>
-            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Pujcene:pujcene")) ?>">Půjčené FUNGUJE</a></li>            
-            <li><a href="">Tisk</a></li>
-            <li><a href="">Odlasit se</a></li>
-            <li><a href="">Prihlášen jako: DODELAT!!</a></li>     
-        </ul>
+    <div>     
+        <nav id="menu">     
+            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Homepage:default")) ?>">Přehled prací</a></li>
+            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Knihyinfo:rezervovane")) ?>">Rezervovane</a></li>
+            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Knihyinfo:pripravene")) ?>">Pripravene k vyzvednutí</a></li>
+            <li><a href="<?php echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Knihyinfo:pujcene")) ?>">Půjčené</a></li>           
+            <li><a href="">Prihlášen jako: DODELAT!!</a></li>
+            <li style="float:right"><a href="">Odlasit se</a></li>
+            <li id="date">
+                <a>  
+                    <script type="text/javascript">
+                        d = new Date();
+                        document.write("Dnes je: " + d.getDate() + ". " + (d.getMonth() + 1) + ". " + d.getFullYear());
+                        document.write("<br />");
+                    </script>               
+                </a>
+            </li>
+        </nav>     
     </div>
+    
 <?php
 		$iterations = 0;
 		foreach ($flashes as $flash) {
 			?>	<div<?php if ($_tmp = array_filter(['flash', $flash->type])) echo ' class="', LR\Filters::escapeHtmlAttr(implode(" ", array_unique($_tmp))), '"' ?>><?php
-			echo LR\Filters::escapeHtmlText($flash->message) /* line 41 */ ?></div>
+			echo LR\Filters::escapeHtmlText($flash->message) /* line 47 */ ?></div>
 <?php
 			$iterations++;
 		}
@@ -91,7 +97,7 @@ class Template2d59123cd5 extends Latte\Runtime\Template
 	function prepare()
 	{
 		extract($this->params);
-		if (isset($this->params['flash'])) trigger_error('Variable $flash overwritten in foreach on line 41');
+		if (isset($this->params['flash'])) trigger_error('Variable $flash overwritten in foreach on line 47');
 		Nette\Bridges\ApplicationLatte\UIRuntime::initialize($this, $this->parentName, $this->blocks);
 		
 	}
@@ -109,7 +115,8 @@ class Template2d59123cd5 extends Latte\Runtime\Template
 ?>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
-	<script src="<?php echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl($basePath)) /* line 47 */ ?>/js/main.js"></script>
+	<script src="<?php echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl($basePath)) /* line 53 */ ?>/js/date.js"></script>
+        
 <?php
 	}
 

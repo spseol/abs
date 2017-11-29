@@ -45,12 +45,17 @@ return array (
     'App\\Presenters\\HomepagePresenter' => 
     array (
       'file' => 'C:\\xampp\\htdocs\\abs\\app\\presenters\\HomepagePresenter.php',
-      'time' => 1511719149,
+      'time' => 1511982154,
+    ),
+    'App\\Presenters\\KnihyinfoPresenter' => 
+    array (
+      'file' => 'C:\\xampp\\htdocs\\abs\\app\\presenters\\KnihyinfoPresenter.php',
+      'time' => 1511808358,
     ),
     'App\\Presenters\\PostPresenter' => 
     array (
       'file' => 'C:\\xampp\\htdocs\\abs\\app\\presenters\\PostPresenter.php',
-      'time' => 1511696947,
+      'time' => 1511981899,
     ),
     'App\\Presenters\\SignPresenter' => 
     array (
@@ -62,18 +67,9 @@ return array (
       'file' => 'C:\\xampp\\htdocs\\abs\\app\\router\\RouterFactory.php',
       'time' => 1504882448,
     ),
-    'App\\Presenters\\PujcenePresenter' => 
-    array (
-      'file' => 'C:\\xampp\\htdocs\\abs\\app\\presenters\\PujcenePresenter.php',
-      'time' => 1511720319,
-    ),
   ),
   1 => 
   array (
-    'Nette\\Environment' => 22,
-    'App\\Presenters\\RedPresenter' => 2,
-    'App\\Presenters\\SelectPresenter' => 3,
-    'App\\Presenters\\BorrowedPresenter' => 3,
-    'App\\Presenters\\NecoPresenter' => 2,
+    'Nette\\Environment' => 2,
   ),
 );

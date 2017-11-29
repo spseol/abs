@@ -1,50 +1,80 @@
 body {
-	font-size: 15px;
-	line-height: 1.6;
-	color: #333;
-	background: white;
+	background: #A1A1A1;
+        margin:0px;
+        padding: 0px;
 }
-
 h1 {
-	color: #3484D2;
+	color: greenyellow;
+}
+#date{
+    
+}
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #555;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: solid black 1px;
+}
+#menu li  {
+    float: left;
+}
+#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 20px;
+    text-decoration: none;
+    
+}
+#menu li a:hover { 
+    background-color: #111;
+    transition: 0.5s;
 }
 
-#ajax-spinner {
-	margin: 15px 0 0 15px;
-	padding: 13px;
-	background: white url('../images/spinner.gif') no-repeat 50% 50%;
-	font-size: 0;
-	z-index: 123456;
-	display: none;
+table{
+    border: solid black 2px;
+    margin: 100px 40px 40px 40px;
+}
+table tr{
+    
+}
+table tr td {
+
+}
+tr :hover { 
+    background: yellow;
 }
 
-div.flash {
-	color: black;
-	background: #FFF9D7;
-	border: 1px solid #E2C822;
-	padding: 1em;
-	margin: 1em 0;
+#sidemenu{
+    padding: 10px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #555;
+    position: fixed;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+    opacity: 0.8;
+
+}
+#sidemenu li{
+
 }
 
-a[href^="#error:"] {
-	background: red;
-	color: white;
+#sidemenu li a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;  
+}
+#sidemenu :hover {
+    width: 150px;
+    background: white;
 }
 
-form th, form td {
-	vertical-align: top;
-	font-weight: normal;
-}
 
-form th {
-	text-align: right;
-}
 
-form .required label {
-	font-weight: bold;
-}
 
-form .error {
-	color: #D00;
-	font-weight: bold;
-}
